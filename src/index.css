@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=David+Libre:wght@400;700&family=Cormorant:wght@400;700&family=Benjamin&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #000000;
+  font-family: 'Merriweather', serif;;
+}
