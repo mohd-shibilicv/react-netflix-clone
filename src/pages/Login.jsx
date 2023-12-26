@@ -17,7 +17,7 @@ const Login = () => {
             navigate('/')
         } catch (error) {
             console.log(error);
-            setError(error.message)
+            setError("Invalid email or password")
         }
     }
 
@@ -30,7 +30,7 @@ const Login = () => {
             <div className="max-w-[450px] h-[600px] mx-auto bg-black/75 text-white rounded-md">
                 <div className="max-w-[320px] mx-auto py-16">
                     <h1 className='text-3xl font-bold'>Sign In</h1>
-                    {error && <p className='mt-2 p-2 bg-red-500 rounded'>{error}</p>}
+                    {error && <p className='mt-5 p-2 bg-red-500 rounded'>{error}</p>}
                     <form onSubmit={handleSubmit} className='w-full flex flex-col py-4'>
                         <input className='p-3 my-2 text-gray-100 bg-gray-700 rounded' type="email" placeholder="Email" autoComplete='email' onChange={(e) => setEmail(e.target.value)} />
                         <input className='p-3 my-2 text-gray-100  bg-gray-700 rounded' type="password" placeholder="Password" autoComplete='current-password' onChange={(e) => setPassword(e.target.value)} />
